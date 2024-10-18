@@ -1,5 +1,5 @@
 
-body {
+/* body {
     box-sizing: border-box;
 }
 
@@ -8,4 +8,31 @@ h1 {
     background-color: greenyellow;
     width: 100%;
     margin-top: 0px;
+} */
+
+
+
+/* bulb */
+
+
+.bulb {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+button {
+    margin:  0 auto;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: none;
+    font-size: 1.6rem;
+    background-color: red;
+    border-radius: 40px;
+    color: aliceblue;
 }
