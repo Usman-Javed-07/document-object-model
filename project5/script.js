@@ -1,4 +1,4 @@
-arr = [
+var arr = [
     
        { dp: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9kZWx8ZW58MHx8MHx8fDA%3D',
         story : 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWx8ZW58MHx8MHx8fDA%3D'},
@@ -15,14 +15,26 @@ arr = [
         dp: 'https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGdpcmwlMjBwcm9maWxlJTIwcGljfGVufDB8fDB8fHww',
         story: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D" },
 ]
+var storiyan = document.querySelector ('#storiyan');
+var clutter = '';
 
-var clutter = ''
 arr.forEach(function(elem,idx){
  clutter += ` <div class="story">
-                <img
+                <img id= "${idx}"
                 src="${elem.dp}"
                 alt="story">
                </div>
                `      
 })
-document.querySelector('#storiyan').innerHTML = clutter;
+storiyan.innerHTML = clutter;
+
+storiyan.addEventListener ('click',function (dets){
+
+     document.querySelector('#full-screen').style.display = "block";
+     document.querySelector('#full-screen').style.backgroundImage =`url(${arr[dets.target.id].story})`;
+    
+     setTimeout (function (){
+          document.querySelector('#full-screen').style.display = "none";
+     },5000);
+});
+

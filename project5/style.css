@@ -22,7 +22,8 @@ body {
     background-color: #fff;
     border-radius: 10px;
     border: 2px solid black;
-    
+    position: relative;
+    overflow: hidden;
 }
 
 #storiyan {
@@ -50,4 +51,14 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+#full-screen {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    background-size: cover;
+    background-position: center;
+    /* background-color: blue; */
 }
